@@ -9,9 +9,14 @@ public class Test {
 		accountTest.deposit(3000);
 		try {
 			accountTest.withdraw(2500);
+			System.out.println("Current balance: $" + accountTest.getBalance());
 		} catch (InsufficientFundsException e) {
 			System.out.println("Your account is short by: $" + e.getAmount());
 			e.printStackTrace();
 		}
+		System.out.println("Current balance: $" + accountTest.getBalance());
+		System.out.println("Interest: " + accountTest.getMonthlyInterestRate());
+		System.out.println("Date created: " + accountTest.getDate());
+
 	}
 }

@@ -51,7 +51,7 @@ public class Account {
 		return this.annualInterestRate / 12;
 	}
 
-	public void withdraw(double amount)throws InsufficientFundsException {
+	public void withdraw(double amount) throws InsufficientFundsException {
 		if (amount <= balance) {
 			this.balance -= amount;
 		} else {
